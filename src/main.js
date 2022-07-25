@@ -63,7 +63,6 @@ const material = new THREE.MeshPhongMaterial( {
     flatShading: THREE.FlatShading
 } );
 const plane = new THREE.Mesh( geometry, material );
-// plane.position.x = 1;
 scene.add( plane );
 
 camera.position.z = 10;
@@ -74,31 +73,6 @@ const upperLight = new THREE.DirectionalLight( 0xffffff, 1);
 // const upperLightHelper = new THREE.DirectionalLightHelper(upperLight, 5);
 upperLight.position.set( 0, 0, 1);
 scene.add(upperLight);
-// scene.add(upperLightHelper );
-
-
-// const light = new THREE.PointLight( 0xffffff, 1, 100 );
-// const lightHelper = new THREE.PointLightHelper(light, 5);
-// light.position.set( -5, -5, -5 );
-// scene.add(lightHelper);
-// scene.add( light );
-
-// function addStar(){
-//     const geometry = new THREE.PlaneGeometry( .25, 5, 5 );
-//     const material = new THREE.MeshStandardMaterial( { color: 0xffff00} );
-//     const star = new THREE.Mesh( geometry, material );
-
-//     const[x, y, z] = Array(3).fill().map(() => THREE.MathUtils.randFloatSpread(100));
-
-//     star.position.set(x, y, z);
-//     scene.add(star);
-// }
-
-// Array(200).fill().forEach(addStar);
-
-// const light = new THREE.AmbientLight( 0x404040 ); // soft white light
-// scene.add( light );
-
 
 const {array} = plane.geometry.attributes.position;
 
